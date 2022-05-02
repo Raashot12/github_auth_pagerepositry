@@ -1,0 +1,10 @@
+.sidebar-parent{
+  width: 35%;
+  background: white;
+  padding: 15px 30px;
+}
+.sidebar-parent img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
