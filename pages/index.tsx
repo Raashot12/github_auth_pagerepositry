@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
-import { Container } from 'react-bootstrap'
+
 
 const Home: NextPage = () => {
   return (
-    <Container className="d-flex justify-content-center mt-5">
+    <main className="MuiContainer-maxWidthLg MuiContainer-root">
       <p>This is Home page</p>
-    </Container>
+    </main>
   )
 }
 

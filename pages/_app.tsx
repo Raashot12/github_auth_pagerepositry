@@ -5,8 +5,8 @@ import { SessionProvider } from 'next-auth/react'
 import AuthWrapper from '../components/AuthWrapper'
 import { Provider } from "react-redux"
 import {store} from "../components/DashboradComponent/store"
-import 'bootstrap/dist/css/bootstrap.min.css'
 import "../styles/sidebar.css"
+import "../styles/mainBoard..css"
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
