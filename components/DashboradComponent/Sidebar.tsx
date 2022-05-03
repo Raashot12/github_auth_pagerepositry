@@ -4,7 +4,7 @@ import React from "react"
 import {signIn, useSession, signOut} from "next-auth/react"
 import {useSelector} from "react-redux"
 import {RootState} from "./store"
-import company from "../../components/assests/71146962.png"
+
 
 type Name = {
   loading: string

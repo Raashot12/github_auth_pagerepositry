@@ -7,12 +7,12 @@ import {
   usersReceived,
   usersLoading,
   userLoggedout,
-} from "../components/Slice/UserDetails"
+} from "../components/slice/UserDetails"
 import {
   sidebardataLoading,
   sidebardataReceived,
   clearsidebardata,
-} from "../components/Slice/SidebarDetails"
+} from "../components/slice/SidebarDetails"
 import MainDashoard from "../components/DashboradComponent/MainDashoard"
 
 const Dashboard = () => {

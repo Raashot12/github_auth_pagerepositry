@@ -12,7 +12,7 @@
 .button-tagline {
   display: flex;
   align-items: center;
-  padding: 12px 20px;
+  padding: 12px 12px;
   cursor: pointer;
   width: 20%;
   border-radius: 5px;
@@ -36,7 +36,7 @@
 .input-container input {
   height: 38px;
   width: 100%;
-  color:#24292f;
+  color: #24292f;
   background-color: #ffffff;
   background-repeat: no-repeat;
   border: 2px solid #d0d7de;
@@ -44,27 +44,46 @@
   padding-left: 5px;
   outline: none;
 }
-.input-container input:focus{
+.input-container input:focus {
   border-color: #0969da;
 }
-.search-btn{
+.search-btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
-.search-btn button{
+.search-btn button {
   box-sizing: border-box;
-  padding: 10px 24px;
-  background-color: #F5F7F9;
+  padding: 12px 20px;
+  background-color: #f5f7f9;
   border: none;
   font-weight: bold;
   cursor: pointer;
   border-radius: 4px;
   margin-left: 1rem;
 }
-.divider{
- background-color:#D8DEE4; 
- width: 100%;
- height: 1px;
+.divider {
+  background-color: #d8dee4;
+  width: 100%;
+  height: 1px;
+}
+
+.repository-card-container {
+  border-top: 1px solid #d8dee4;
+  border-bottom: 1px solid #d8dee4;
+  height: 150px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.project-name {
+  color: #0969da;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.description{
+  font-size: 14px;
+  color: #57606a;
+  margin-top: .5rem;
 }

@@ -5,7 +5,7 @@ const Repository = () => {
     <>
       <section className="search-btn">
         <div className="input-container">
-          <input value="" type="text" />
+          <input type="text" />
         </div>
         <div>
           <span>
