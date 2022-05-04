@@ -59,7 +59,7 @@ const Sidebar = () => {
             </section>
             <section className="following">
               <div>.</div>
-              <p>{sidebarResult.sidebarData.followers} following</p>
+              <p>{sidebarResult.sidebarData.following} following</p>
             </section>
           </div>
           <div className="personal-container">
