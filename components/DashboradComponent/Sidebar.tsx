@@ -11,7 +11,7 @@ type Name = {
 }
 const Sidebar = () => {
   const sidebarResult: Name = useSelector((state: RootState) => state.sidebar)
-  const [follow, setFollow] = useState(false)
+  const [follow, setFollow] = useState<boolean>(false)
   const handleFollow =()=> {
     setFollow(!follow)
   }
