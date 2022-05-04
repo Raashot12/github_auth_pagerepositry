@@ -1,11 +1,15 @@
 import React from "react"
 
-const Repository = () => {
+interface IProps {
+  search: string
+  handleSearchChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+}
+const Repository = (props: IProps) => {
   return (
     <>
       <section className="search-btn">
         <div className="input-container">
-          <input type="text" />
+          <input type="text" value={props.search} onChange={props.handleSearchChange} />
         </div>
         <div>
           <span>
@@ -22,5 +26,4 @@ const Repository = () => {
     </>
   )
 }
-
 export default Repository

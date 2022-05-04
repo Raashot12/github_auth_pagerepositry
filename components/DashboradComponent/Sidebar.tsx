@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/link-passhref */
 /* eslint-disable jsx-a11y/alt-text */
-import React from "react"
+import React,{useState} from "react"
 import {useSelector} from "react-redux"
 import {RootState} from "./store"
 
@@ -11,6 +11,10 @@ type Name = {
 }
 const Sidebar = () => {
   const sidebarResult: Name = useSelector((state: RootState) => state.sidebar)
+  const [follow, setFollow] = useState(false)
+  const handleFollow =()=> {
+    setFollow(!follow)
+  }
   return (
     <div className="sidebar-parent">
       {sidebarResult.loading === "pending" ? (
@@ -32,7 +36,9 @@ const Sidebar = () => {
             {sidebarResult.sidebarData.name}
           </h2>
           <p style={{color: "#87878c"}}>{sidebarResult.sidebarData.login}</p>
-          <button className="btn btn-follow">Follow </button>
+          <button className="btn btn-follow" onClick={handleFollow}>
+            {follow ? "Following" : "Follow"}{" "}
+          </button>
           <p className="bio">{sidebarResult.sidebarData.bio}</p>
           <div className="follows">
             <section className="followers">
@@ -111,8 +117,8 @@ const Sidebar = () => {
               <p>{sidebarResult.sidebarData.blog}</p>
             </section>
             <div className="divider sider-divider"></div>
-              <section>
-                <p className="organization">Organisations</p>
+            <section>
+              <p className="organization">Organisations</p>
               <svg
                 width="100"
                 height="60"
