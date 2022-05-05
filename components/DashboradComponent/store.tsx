@@ -1,6 +1,6 @@
 import {Action, configureStore, ThunkAction} from "@reduxjs/toolkit"
-import userDetails from "../../components/slice/UserDetails"
-import sidebarDetails from "../../components/slice/SidebarDetails"
+import userDetails from "../slice/UserDetails"
+import sidebarDetails from "../slice/SidebarDetails"
 
 export const store = configureStore({
   reducer: {

@@ -1,5 +1,4 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit"
-// import type { RootState } from "../../components/DashboradComponent/store"
+import {createSlice} from "@reduxjs/toolkit"
 
 export interface UserState {
   loading: "idle" | "pending" | "succeeded" | "failed"
