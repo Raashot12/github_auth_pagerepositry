@@ -15,9 +15,21 @@ type UserProject = {
   private: string
   updated_at: string
 }
+type BoardType = {
+  users: {
+    id?: number
+    name?: string
+    url?: string
+    description?: string
+    language?: string
+    private?: string
+    updated_at?: string
+  }[]
+  loading: string
+}
 const MainDashoard = () => {
   const boardResult = useSelector((state: RootState) => state.details)
-  const {users}: any = boardResult
+  const {users, loading}: BoardType = boardResult
   const ref = useRef<HTMLDivElement>(null)
   const [search, setNewSearch] = useState<string>("")
 
@@ -27,7 +39,7 @@ const MainDashoard = () => {
 
    const filtered = !search
      ? users
-     : users.filter((person: UserProject) =>
+     : users.filter((person: any) =>
          person.name.toLowerCase().includes(search.toLowerCase())
        )
   const scrollNext = () => {
@@ -55,7 +67,7 @@ const MainDashoard = () => {
           <Repository search={search} handleSearchChange={handleSearchChange} />
           <div ref={ref} className="scroll-card">
             {boardResult.users &&
-              filtered.map((data: UserProject) => {
+              filtered.map((data) => {
                 return (
                   <main className="repository-card-container" key={data?.id}>
                     <div>
