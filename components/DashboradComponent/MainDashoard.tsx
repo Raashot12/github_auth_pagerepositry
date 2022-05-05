@@ -28,10 +28,10 @@ type BoardType = {
   loading: string
 }
 const MainDashoard = () => {
-  const boardResult = useSelector(
+  const boardResult: BoardType = useSelector(
     (state: RootState) => state.details
   )
-  const {users, loading}= boardResult
+
   const ref = useRef<HTMLDivElement>(null)
   const [search, setNewSearch] = useState<string>("")
 
@@ -40,8 +40,8 @@ const MainDashoard = () => {
   }
 
    const filtered = !search
-     ? users
-     : users.filter((person: any) =>
+     ? boardResult.users
+     : boardResult.users.filter((person: any) =>
          person.name.toLowerCase().includes(search.toLowerCase())
        )
   const scrollNext = () => {
@@ -59,7 +59,7 @@ const MainDashoard = () => {
 
   return (
     <div className="main-board">
-      {loading === "pending" ? (
+      {boardResult.loading === "pending" ? (
         <div>
           <h4 style={{textAlign: "center"}}>Loading</h4>
         </div>
@@ -69,7 +69,7 @@ const MainDashoard = () => {
           <Repository search={search} handleSearchChange={handleSearchChange} />
           <div ref={ref} className="scroll-card">
             {boardResult.users &&
-              filtered.map((data:any) => {
+              filtered.map((data: any) => {
                 return (
                   <main className="repository-card-container" key={data?.id}>
                     <div>
