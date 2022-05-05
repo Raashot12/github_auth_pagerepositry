@@ -1,12 +1,8 @@
 import {Action, configureStore, ThunkAction} from "@reduxjs/toolkit"
-import userDetails from "../slice/UserDetails"
-import sidebarDetails from "../slice/SidebarDetails"
+import rootReducer from "../rootReducers"
 
 export const store = configureStore({
-  reducer: {
-    details: userDetails,
-    sidebar: sidebarDetails,
-  },
+  reducer: rootReducer
 })
 
 export type AppDispatch = typeof store.dispatch
