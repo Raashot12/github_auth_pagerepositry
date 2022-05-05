@@ -57,7 +57,7 @@ const MainDashoard = () => {
 
   return (
     <div className="main-board">
-      {boardResult.loading === "pending" ? (
+      {loading === "pending" ? (
         <div>
           <h4 style={{textAlign: "center"}}>Loading</h4>
         </div>
