@@ -1,12 +1,12 @@
 import {createSlice} from "@reduxjs/toolkit"
 import { RootState } from "../DashboradComponent/store"
 
-export interface UserState {
+export interface SibebarState {
   loading: "idle" | "pending" | "succeeded" | "failed"
   sidebarData: []
 }
 
-const initialState: UserState = {
+const initialState: SibebarState = {
   loading: "idle",
   sidebarData: [],
 }
