@@ -11,7 +11,7 @@ const initialState: SibebarState = {
   sidebarData: [],
 }
 
-export const SidebarDetails = createSlice({
+export const sidebarDetails = createSlice({
   name: "currentUser",
   initialState,
   reducers: {
@@ -37,6 +37,6 @@ export const selectCount = (state: RootState) => state
 
 // Action creators are generated for each case reducer function
 export const {sidebardataLoading, sidebardataReceived, clearsidebardata} =
-  SidebarDetails.actions
+  sidebarDetails.actions
 
-export default SidebarDetails.reducer
+export default sidebarDetails.reducer
