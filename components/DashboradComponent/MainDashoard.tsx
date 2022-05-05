@@ -17,6 +17,7 @@ type UserProject = {
 }
 const MainDashoard = () => {
   const boardResult = useSelector((state: RootState) => state.details)
+  const {users} = boardResult
   const ref = useRef<HTMLDivElement>(null)
   const [search, setNewSearch] = useState<string>("")
 
@@ -25,8 +26,8 @@ const MainDashoard = () => {
   }
 
    const filtered = !search
-     ? boardResult.users
-     : boardResult.users.filter((person: UserProject) =>
+     ? users
+     : users.filter((person: UserProject) =>
          person.name.toLowerCase().includes(search.toLowerCase())
        )
   const scrollNext = () => {
