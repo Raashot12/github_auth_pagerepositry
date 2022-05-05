@@ -28,10 +28,9 @@ type BoardType = {
   loading: string
 }
 const MainDashoard = () => {
-  const boardResult: BoardType = useSelector(
+  const boardResult = useSelector(
     (state: RootState) => state.details
   )
-  console.log(boardResult)
   const {users, loading}= boardResult
   const ref = useRef<HTMLDivElement>(null)
   const [search, setNewSearch] = useState<string>("")
@@ -70,7 +69,7 @@ const MainDashoard = () => {
           <Repository search={search} handleSearchChange={handleSearchChange} />
           <div ref={ref} className="scroll-card">
             {boardResult.users &&
-              filtered.map((data) => {
+              filtered.map((data:any) => {
                 return (
                   <main className="repository-card-container" key={data?.id}>
                     <div>
