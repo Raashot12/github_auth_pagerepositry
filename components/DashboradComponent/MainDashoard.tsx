@@ -5,31 +5,9 @@ import {useSelector} from "react-redux"
 import {RootState} from "./store"
 import Link from "next/link"
 import moment from "moment"
-import { Interface } from "readline"
 
-// type UserProject = {
-//   id: number
-//   name: string
-//   url: string
-//   description: string
-//   language: string
-//   private: string
-//   updated_at: string
-// }
-interface BoardType {
-  users: {
-    id?: number
-    name?: string
-    url?: string
-    description?: string
-    language?: string
-    private?: string
-    updated_at?: string
-  }[]
-  loading: string
-}
 const MainDashoard = () => {
-  const boardResult: BoardType = useSelector(
+  const boardResult:any = useSelector(
     (state: RootState) => state.details
   )
 
