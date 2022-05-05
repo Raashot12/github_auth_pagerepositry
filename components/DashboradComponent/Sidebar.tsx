@@ -5,12 +5,9 @@ import {useSelector} from "react-redux"
 import {RootState} from "./store"
 
 
-type Name = {
-  loading: string
-  sidebarData: any
-}
+
 const Sidebar = () => {
-  const sidebarResult: Name = useSelector((state: RootState) => state.sidebar)
+  const sidebarResult: any = useSelector((state: RootState) => state.sidebar)
   const [follow, setFollow] = useState<boolean>(false)
   const handleFollow =()=> {
     setFollow(!follow)
