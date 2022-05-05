@@ -17,7 +17,7 @@ type UserProject = {
 }
 const MainDashoard = () => {
   const boardResult = useSelector((state: RootState) => state.details)
-  const {users} = boardResult
+  const {users}: any = boardResult
   const ref = useRef<HTMLDivElement>(null)
   const [search, setNewSearch] = useState<string>("")
 
@@ -55,7 +55,7 @@ const MainDashoard = () => {
           <Repository search={search} handleSearchChange={handleSearchChange} />
           <div ref={ref} className="scroll-card">
             {boardResult.users &&
-              filtered.map((data: UserProject, id) => {
+              filtered.map((data: UserProject) => {
                 return (
                   <main className="repository-card-container" key={data?.id}>
                     <div>

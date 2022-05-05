@@ -1,5 +1,5 @@
 import React from 'react'
-import { signIn, useSession, signOut } from 'next-auth/react'
+import { signIn, useSession, signOut, getProviders } from 'next-auth/react'
 import Link from 'next/link'
 
 const Header = () => {
@@ -66,4 +66,16 @@ const Header = () => {
   )
 }
 
-export default Header
+// export async function getServerSideProps() {
+//   const providers = await getProviders()
+//   return {
+//     props: {
+//       providers,
+//     },
+//   }
+// }
+
+export default Header;
+
+
+
