@@ -1,4 +1,5 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit"
+import {createSlice} from "@reduxjs/toolkit"
+import { RootState } from "../DashboradComponent/store"
 
 export interface UserState {
   loading: "idle" | "pending" | "succeeded" | "failed"
@@ -32,6 +33,7 @@ export const SidebarDetails = createSlice({
     },
   },
 })
+export const selectCount = (state: RootState) => state
 
 // Action creators are generated for each case reducer function
 export const {sidebardataLoading, sidebardataReceived, clearsidebardata} =
