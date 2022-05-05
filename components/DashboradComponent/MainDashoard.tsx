@@ -28,8 +28,11 @@ type BoardType = {
   loading: string
 }
 const MainDashoard = () => {
-  const boardResult = useSelector((state: RootState) => state.details)
-  const {users, loading}: BoardType = boardResult
+  const boardResult: BoardType = useSelector(
+    (state: RootState) => state.details
+  )
+  console.log(boardResult)
+  const {users, loading}= boardResult
   const ref = useRef<HTMLDivElement>(null)
   const [search, setNewSearch] = useState<string>("")
 
@@ -57,7 +60,7 @@ const MainDashoard = () => {
 
   return (
     <div className="main-board">
-      {boardResult.loading === "pending" ? (
+      {loading === "pending" ? (
         <div>
           <h4 style={{textAlign: "center"}}>Loading</h4>
         </div>
