@@ -1,19 +1,19 @@
 import React from 'react'
-import { signIn, useSession, signOut } from 'next-auth/react'
+import { signIn, useSession, signOut, getProviders } from 'next-auth/react'
 import Link from 'next/link'
 
 const Header = () => {
   const { data, status } = useSession()
 
   const handleSignIn = async () => {
-    await signIn("github", {
-      callbackUrl: "https://github-auth-pagerepositry.vercel.app",
+    await signIn('github', {
+      callbackUrl: `${process.env.NEXTAUTH_URL}/dashboard`,
     })
   }
 
   const handleLogout = async () => {
     await signOut({
-      callbackUrl: "https://github-auth-pagerepositry.vercel.app",
+      callbackUrl: `${process.env.NEXTAUTH_URL}`,
     })
   }
 
