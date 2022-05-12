@@ -8,13 +8,14 @@ const Header = () => {
   const handleSignIn = async () => {
     await signIn("github", {
       callbackUrl:
-        "https://github-auth-pagerepositry.vercel.app/api/auth/callback/github",
+        "https://github-auth-pagerepositry-63f37mk9x-raashot12.vercel.app/dashboard",
     })
   }
 
   const handleLogout = async () => {
     await signOut({
-      callbackUrl: "https://github-auth-pagerepositry.vercel.app",
+      callbackUrl:
+        "https://github-auth-pagerepositry-63f37mk9x-raashot12.vercel.app",
     })
   }
 
