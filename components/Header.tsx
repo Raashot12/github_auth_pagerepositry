@@ -6,14 +6,14 @@ const Header = () => {
   const { data, status } = useSession()
 
   const handleSignIn = async () => {
-    await signIn('github', {
-      callbackUrl: `${process.env.NEXTAUTH_URL}/dashboard`,
+    await signIn("github", {
+      callbackUrl: "https://github-auth-pagerepositry.vercel.app/dashboard",
     })
   }
 
   const handleLogout = async () => {
     await signOut({
-      callbackUrl: `${process.env.NEXTAUTH_URL}`,
+      callbackUrl: "https://github-auth-pagerepositry.vercel.app",
     })
   }
 

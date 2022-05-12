@@ -5,11 +5,11 @@
 }
 .sidebar-parent img {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 .navbar {
-  background-color: #24292F;
+  background-color: #050d21;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,10 +52,10 @@
 .following div {
   margin-right: 0.5rem;
 }
-.follows{
+.follows {
   display: flex;
 }
-.follows .followers{
+.follows .followers {
   margin-right: 1rem;
 }
 .logout-btn {
@@ -84,28 +84,33 @@
   color: black;
   margin-left: 0.8rem;
 }
-.sider-divider{
+.sider-divider {
   margin-top: 1rem;
 }
-.user-ui{
+.user-ui {
   display: flex;
   align-items: center;
 }
-.personal-container{
+.personal-container {
   margin-top: 1.5rem;
 }
-.personal-details{
+.personal-details {
   display: flex;
   align-items: center;
 }
-.iconic{
-  margin-right:  1rem;
+.iconic {
+  margin-right: 1rem;
 }
-.ruler-underline{
+.ruler-underline {
   margin-top: 1.2rem;
 }
-.organization{
+.organization {
   padding-top: 1rem;
   font-weight: bold;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
+}
+.hero-header {
+  font-size: 72px;
+  letter-spacing: -0.03em;
+  font-weight: 800 !important;
 }

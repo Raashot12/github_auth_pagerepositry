@@ -25,9 +25,44 @@ a {
   padding-left: 16px;
   padding-right: 16px;
 }
-.container-flex{
+.container-flex {
   display: flex;
   justify-content: space-between;
+}
+.landing-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.globe-img {
+  height: auto;
+  width: 100%;
+}
+.hero-github {
+  background: #050d21;
+  color: #ffff;
+  height: 100vh;
+}
+.landing-page p {
+  color: #8193b2;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 1.5rem;
+}
+.email-form input {
+  padding: 0.7rem;
+  border-radius: 0.2rem;
+  border: none;
+  margin-right: 1rem;
+}
+.email-form button {
+  background-color: #2ea650;
+  padding: 0.7rem;
+  border-radius: .3rem;
+  cursor: pointer;
+  border: none;
+  color: #ffff;
+  font-weight: bold;
 }
 
 /* MEDIA QUERIES  */
