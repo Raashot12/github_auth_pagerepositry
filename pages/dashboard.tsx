@@ -15,9 +15,9 @@ import {
 } from "../components/SidebarDetails"
 import MainDashoard from "../components/DashboradComponent/MainDashoard"
 
-const Dashboard = () => {
+const Dashboard = ({data}: any) => {
   const storeData = useSelector((state: RootState) => state.details)
-
+console.log(data)
   const dispatch = useDispatch()
   async function repoDataURL() {
     //Get repo data about github user repository
@@ -61,4 +61,15 @@ const Dashboard = () => {
     </main>
   )
 }
+
+// This gets called on every request
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(`https://api.github.com/users/Raashot12`)
+  const data = await res.json()
+
+  // Pass data to the page via props
+  return { props: { data } }
+}
+
 export default Dashboard
