@@ -2,7 +2,6 @@
 import React, {useEffect } from "react"
 import {useDispatch} from "react-redux"
 import Sidebar from "../components/DashboradComponent/Sidebar"
-import { useSession} from "next-auth/react"
 import {
   usersReceived,
   usersLoading,
@@ -14,9 +13,7 @@ import {
 import MainDashoard from "../components/DashboradComponent/MainDashoard"
 
 const Dashboard = () => {
-  
-  const { data, status } = useSession()
-  console.log(`"=>"${ data }`)
+
   const dispatch = useDispatch()
   async function repoDataURL() {
     //Get repo data about github user repository
