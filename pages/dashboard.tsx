@@ -1,23 +1,22 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, {useEffect, useState} from "react"
-import {useDispatch, useSelector} from "react-redux"
+import React, {useEffect } from "react"
+import {useDispatch} from "react-redux"
 import Sidebar from "../components/DashboradComponent/Sidebar"
-import {RootState} from "../components/DashboradComponent/store"
+import { useSession} from "next-auth/react"
 import {
   usersReceived,
   usersLoading,
-  userLoggedout,
 } from "../components/UserDetails"
 import {
   sidebardataLoading,
   sidebardataReceived,
-  clearsidebardata,
 } from "../components/SidebarDetails"
 import MainDashoard from "../components/DashboradComponent/MainDashoard"
 
-const Dashboard = ({data}: any) => {
-  const storeData = useSelector((state: RootState) => state.details)
-console.log(data)
+const Dashboard = () => {
+  
+  const { data, status } = useSession()
+  console.log(`"=>"${ data }`)
   const dispatch = useDispatch()
   async function repoDataURL() {
     //Get repo data about github user repository
@@ -48,9 +47,9 @@ console.log(data)
       )
   }
   useEffect(() => {
-    repoDataURL()
-    fetchSidebar()
+    Promise.all([repoDataURL(),fetchSidebar()])
   }, [])
+  
 
   return (
     <main className="MuiContainer-maxWidthLg MuiContainer-root">
